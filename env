@@ -1,0 +1,8 @@
+# Variables de entorno para la base de datos
+MYSQL_ROOT_PASSWORD=root
+MYSQL_DATABASE=mydatabase
+MYSQL_USER=myuser
+MYSQL_PASSWORD=mypassword
+
+# Nombre del directorio raiz del proyecto
+CODEIGNITER_FOLDER=api

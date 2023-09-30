@@ -1,0 +1,25 @@
+version: '3'
+services:
+  apache:
+    build:
+      context: ./apache
+    ports:
+      - "80:80"
+    volumes:
+      - ../${CODEIGNITER_FOLDER}:/var/www/html/codeigniter
+    depends_on:
+      - mariadb
+  mariadb:
+    build:
+      context: ./mariadb
+    volumes:
+      - db_data:/var/lib/mysql
+  phpmyadmin:
+    build:
+      context: ./phpmyadmin
+    ports:
+      - "8080:80"
+    depends_on:
+      - mariadb
+volumes:
+  db_data:
